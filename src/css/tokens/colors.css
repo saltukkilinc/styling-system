@@ -1,0 +1,33 @@
+:root {
+  /* =========================
+     PRIMITIVE COLORS
+     ========================= */
+
+  /* Gray scale */
+  --color-gray-100: oklch(0.97 0 0);
+  --color-gray-300: oklch(0.85 0 0);
+  --color-gray-500: oklch(0.6 0 0);
+  --color-gray-700: oklch(0.4 0 0);
+  --color-gray-900: oklch(0.2 0 0);
+
+  /* Brand */
+  --color-blue-500: oklch(0.6 0.15 250);
+
+  /* =========================
+     SEMANTIC COLORS
+     ========================= */
+
+  --color-background: var(--color-gray-100);
+  --color-text: var(--color-gray-900);
+  --color-primary: var(--color-blue-500);
+  --color-border: var(--color-gray-300);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--color-gray-900);
+    --color-text: var(--color-gray-100);
+
+    --color-border: var(--color-gray-700);
+  }
+}
