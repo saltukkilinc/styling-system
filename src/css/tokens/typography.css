@@ -1,0 +1,82 @@
+/* 
+ * 1-) download google font as ttf file
+ * 2-) select variable file and convert to woff2 from here  https://fontsource.org/tools/converter
+*/
+
+/* Inter Variable */
+@font-face {
+  font-family: "Inter";
+  src: url("/src/assets/fonts/inter/variable.woff2") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Poppins Static Fonts */
+@font-face {
+  font-family: "Poppins";
+  src: url("/src/assets/fonts/poppins/regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/src/assets/fonts/poppins/semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/src/assets/fonts/poppins/bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/src/assets/fonts/poppins/extrabold.woff2") format("woff2");
+  font-weight: 800;
+  font-display: swap;
+}
+
+/* Inter */
+.test-100 {
+  font-family: "Inter";
+  font-weight: 100;
+}
+.test-300 {
+  font-family: "Inter";
+  font-weight: 300;
+}
+.test-500 {
+  font-family: "Inter";
+  font-weight: 500;
+}
+.test-700 {
+  font-family: "Inter";
+  font-weight: 700;
+}
+.test-900 {
+  font-family: "Inter";
+  font-weight: 900;
+}
+
+/* Poppins */
+.poppins-test-400 {
+  font-family: "Poppins";
+  font-weight: 400;
+}
+.poppins-test-600 {
+  font-family: "Poppins";
+  font-weight: 600;
+}
+.poppins-test-700 {
+  font-family: "Poppins";
+  font-weight: 700;
+}
+.poppins-test-800 {
+  font-family: "Poppins";
+  font-weight: 800;
+}
