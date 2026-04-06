@@ -1,0 +1,23 @@
+.button {
+  --button-padding: var(--space-2) var(--space-3);
+  --button-border-radius: var(--radius-md);
+
+  background: none;
+  border: none;
+  color: inherit;
+  outline: none;
+  cursor: pointer;
+
+  padding: var(--button-padding);
+  border-radius: var(--button-border-radius);
+}
+
+.button-primary {
+  background: var(--color-primary);
+  color: var(--color-primary-foreground);
+}
+
+.button-primary:hover {
+  background: oklch(from var(--color-primary) l c h / 0.9);
+  color: oklch(from var(--color-primary-foreground) calc(l * 1.1) c h);
+}
