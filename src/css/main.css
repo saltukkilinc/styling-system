@@ -1,3 +1,5 @@
 @import './tokens/colors.css';
 @import './tokens/typography.css';
+
 @import './base/reset.css';
+@import './base/typography.css';
