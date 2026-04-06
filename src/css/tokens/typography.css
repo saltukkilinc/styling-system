@@ -1,12 +1,26 @@
 /* 
- * 1-) download google font as ttf file
- * 2-) select variable file and convert to woff2 from here  https://fontsource.org/tools/converter
+ * download fonts (generally ttf)
+ * if font has variable use it
+ * if font static use only variant you want (400, 600 etc.)
+ * convert the files into woff2
+
+  TYPOGRAPHY SYSTEM
+
+  * Inter → primary (variable font, 100–900)
+  * Poppins → secondary (static: 400, 600, 700)
+
+  * Fluid typography via clamp()
+  * Tokens used for scalability
+  * Headings use secondary font
+  * Body uses primary font
+
+  Note:Not all fonts support variable axes.
 */
 
 /* Inter Variable */
 @font-face {
   font-family: "Inter";
-  src: url("/src/assets/fonts/inter/variable.woff2") format("truetype");
+  src: url("/src/assets/fonts/inter/variable.woff2") format("woff2");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
@@ -17,6 +31,7 @@
   font-family: "Poppins";
   src: url("/src/assets/fonts/poppins/regular.woff2") format("woff2");
   font-weight: 400;
+  font-style: normal;
   font-display: swap;
 }
 
@@ -24,6 +39,7 @@
   font-family: "Poppins";
   src: url("/src/assets/fonts/poppins/semibold.woff2") format("woff2");
   font-weight: 600;
+  font-style: normal;
   font-display: swap;
 }
 
@@ -31,52 +47,92 @@
   font-family: "Poppins";
   src: url("/src/assets/fonts/poppins/bold.woff2") format("woff2");
   font-weight: 700;
+  font-style: normal;
   font-display: swap;
 }
 
-@font-face {
-  font-family: "Poppins";
-  src: url("/src/assets/fonts/poppins/extrabold.woff2") format("woff2");
-  font-weight: 800;
-  font-display: swap;
+:root {
+  /* Font Family */
+
+  --font-primary: "Inter", system-ui, sans-serif;
+  --font-secondary: "Poppins", system-ui, sans-serif;
+
+  /* Fluid Font Size */
+
+  --font-size-xs: clamp(0.75rem, 0.7rem + 0.2vw, 0.8rem);
+  --font-size-sm: clamp(0.875rem, 0.8rem + 0.3vw, 0.95rem);
+  --font-size-md: clamp(1rem, 0.9rem + 0.4vw, 1.125rem);
+  --font-size-lg: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+  --font-size-xl: clamp(1.5rem, 1.3rem + 0.8vw, 2rem);
+  --font-size-2xl: clamp(2rem, 1.6rem + 1.2vw, 3rem);
+  --font-size-3xl: clamp(2.5rem, 2rem + 2vw, 4rem);
+
+  /* Font Weight */
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Line Height */
+
+  --line-height-120: 1.2;
+  --line-height-150: 1.5;
+  --line-height-170: 1.7;
 }
 
-/* Inter */
-.test-100 {
-  font-family: "Inter";
-  font-weight: 100;
-}
-.test-300 {
-  font-family: "Inter";
-  font-weight: 300;
-}
-.test-500 {
-  font-family: "Inter";
-  font-weight: 500;
-}
-.test-700 {
-  font-family: "Inter";
-  font-weight: 700;
-}
-.test-900 {
-  font-family: "Inter";
-  font-weight: 900;
+body {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-150);
+  font-weight: var(--font-weight-regular);
 }
 
-/* Poppins */
-.poppins-test-400 {
-  font-family: "Poppins";
-  font-weight: 400;
+/* Headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: var(--font-secondary);
+  line-height: var(--line-height-120);
+  font-weight: var(--font-weight-bold);
 }
-.poppins-test-600 {
-  font-family: "Poppins";
-  font-weight: 600;
+
+h1,
+.h1 {
+  font-size: var(--font-size-3xl);
 }
-.poppins-test-700 {
-  font-family: "Poppins";
-  font-weight: 700;
+
+h2,
+.h2 {
+  font-size: var(--font-size-2xl);
 }
-.poppins-test-800 {
-  font-family: "Poppins";
-  font-weight: 800;
+
+h3,
+.h3 {
+  font-size: var(--font-size-xl);
+}
+
+h4,
+.h4 {
+  font-size: var(--font-size-lg);
+}
+
+h5,
+.h5 {
+  font-size: var(--font-size-md);
+}
+
+h6,
+.h6 {
+  font-size: var(--font-size-sm);
 }
