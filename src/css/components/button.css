@@ -1,13 +1,16 @@
 .button {
   --button-padding: var(--space-2) var(--space-3);
   --button-border-radius: var(--radius-md);
+  --button-gap: var(--space-2);
 
   background: none;
   border: none;
   color: inherit;
   outline: none;
   cursor: pointer;
-
+  display: inline-flex;
+  align-items: center;
+  gap: var(--button-gap);
   padding: var(--button-padding);
   border-radius: var(--button-border-radius);
 }
@@ -20,4 +23,13 @@
 .button-primary:hover {
   background: oklch(from var(--color-primary) l c h / 0.9);
   color: oklch(from var(--color-primary-foreground) calc(l * 1.1) c h);
+}
+
+.button-primary:active {
+  background: oklch(from var(--color-primary) l c h / 0.8);
+  color: oklch(from var(--color-primary-foreground) calc(l * 1.2) c h);
+}
+
+.button-primary:focus-visible {
+  box-shadow: 0 0 0 2px var(--color-ring);
 }
