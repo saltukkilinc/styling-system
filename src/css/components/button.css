@@ -10,9 +10,14 @@
   cursor: pointer;
   display: inline-flex;
   align-items: center;
+  transition: background 0.3s ease;
   gap: var(--button-gap);
   padding: var(--button-padding);
   border-radius: var(--button-border-radius);
+}
+
+.button:focus-visible {
+  box-shadow: 0 0 0 2px var(--color-ring);
 }
 
 .button-primary {
@@ -21,15 +26,21 @@
 }
 
 .button-primary:hover {
-  background: oklch(from var(--color-primary) l c h / 0.9);
+  background: oklch(from var(--color-primary) calc(l - 0.02) c h);
   color: oklch(from var(--color-primary-foreground) calc(l * 1.1) c h);
 }
 
 .button-primary:active {
-  background: oklch(from var(--color-primary) l c h / 0.8);
+  background: oklch(from var(--color-primary) calc(l - 0.04) c h);
   color: oklch(from var(--color-primary-foreground) calc(l * 1.2) c h);
 }
 
-.button-primary:focus-visible {
-  box-shadow: 0 0 0 2px var(--color-ring);
+.button-secondary {
+  background: var(--color-secondary);
+  color: var(--color-secondary-foreground);
+}
+
+.button-secondary:hover {
+  background: oklch(from var(--color-secondary) calc(l - 0.02) c h);
+  color: oklch(from var(--color-secondary-foreground) calc(l * 1.1) c h);
 }
