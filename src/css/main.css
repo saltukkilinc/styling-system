@@ -3,6 +3,7 @@
 @import './tokens/spacing.css';
 @import './tokens/border-radius.css';
 
+@import './base/globals.css';
 @import './base/reset.css';
 @import './base/typography.css';
 

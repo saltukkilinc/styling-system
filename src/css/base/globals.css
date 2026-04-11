@@ -1,0 +1,16 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-background);
+  color: var(--color-text);
+}
+
+main {
+  flex: 1;
+}
+
+body > header,
+body > footer {
+  flex-shrink: 0;
+}
