@@ -2,10 +2,12 @@
   --button-padding: var(--space-2) var(--space-3);
   --button-border-radius: var(--radius-md);
   --button-gap: var(--space-2);
+  --button-background: none;
+  --button-color: inherit;
 
-  background: none;
+  background: var(--button-background);
+  color: var(--button-color);
   border: none;
-  color: inherit;
   outline: none;
   cursor: pointer;
   display: inline-flex;
@@ -16,31 +18,56 @@
   border-radius: var(--button-border-radius);
 }
 
+/* ** Accessability */
+
 .button:focus-visible {
   box-shadow: 0 0 0 2px var(--color-ring);
 }
 
+
+/* ** Sizes */
+
+.button-small {
+  --button-padding: var(--space-1) var(--space-2);
+}
+
+.button-large {
+  --button-padding: var(--space-3) var(--space-4);
+}
+
+
+/* ** Variants */
+
 .button-primary {
-  background: var(--color-primary);
-  color: var(--color-primary-foreground);
+  --button-background: var(--color-primary);
+  --button-color: var(--color-primary-foreground);
 }
 
 .button-primary:hover {
-  background: oklch(from var(--color-primary) calc(l - 0.02) c h);
-  color: oklch(from var(--color-primary-foreground) calc(l * 1.1) c h);
+  --button-background: oklch(from var(--color-primary) calc(l - 0.02) c h);
+  --button-color: oklch(from var(--color-primary-foreground) calc(l * 1.1) c h);
 }
 
 .button-primary:active {
-  background: oklch(from var(--color-primary) calc(l - 0.04) c h);
-  color: oklch(from var(--color-primary-foreground) calc(l * 1.2) c h);
+  --button-background: oklch(from var(--color-primary) calc(l - 0.04) c h);
+  --button-color: oklch(from var(--color-primary-foreground) calc(l * 1.2) c h);
 }
 
 .button-secondary {
-  background: var(--color-secondary);
-  color: var(--color-secondary-foreground);
+  --button-background: var(--color-secondary);
+  --button-color: var(--color-secondary-foreground);
 }
 
 .button-secondary:hover {
-  background: oklch(from var(--color-secondary) calc(l - 0.02) c h);
-  color: oklch(from var(--color-secondary-foreground) calc(l * 1.1) c h);
+  --button-background: oklch(from var(--color-secondary) calc(l - 0.02) c h);
+  --button-color: oklch(
+    from var(--color-secondary-foreground) calc(l * 1.1) c h
+  );
+}
+
+.button-secondary:active {
+  --button-background: oklch(from var(--color-secondary) calc(l - 0.04) c h);
+  --button-color: oklch(
+    from var(--color-secondary-foreground) calc(l * 1.2) c h
+  );
 }
