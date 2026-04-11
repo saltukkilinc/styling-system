@@ -1,3 +1,18 @@
+
+/*
+ * Page Structure & General Styling
+ * Add body some styles
+ * Header, footer and main should be under body
+ * Main covers all remaining space with flex
+ * Page section should be under main
+ * Lastly, container under page section
+*/
+
+:root {
+  --section-padding: var(--space-8) var(--space-4);
+  --container-max-width: 1200px;
+}
+
 body {
   min-height: 100vh;
   display: flex;
@@ -6,11 +21,28 @@ body {
   color: var(--color-text);
 }
 
-main {
-  flex: 1;
-}
-
 body > header,
 body > footer {
   flex-shrink: 0;
+}
+
+body > main {
+  flex: 1;
+}
+
+main > section {
+  padding: var(--section-padding);
+}
+
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
+
+/* ** Desktop Screen */
+
+@media (min-width: 1024px) {
+  :root {
+    --section-padding: var(--space-10) var(--space-8);
+  }
 }
