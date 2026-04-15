@@ -98,6 +98,22 @@
 
 
 /* ========================
+   MARGIN BLOCK END
+   ======================== */
+
+.mb-0 { margin-block-end: var(--space-0); }
+.mb-1 { margin-block-end: var(--space-1); }
+.mb-2 { margin-block-end: var(--space-2); }
+.mb-3 { margin-block-end: var(--space-3); }
+.mb-4 { margin-block-end: var(--space-4); }
+.mb-5 { margin-block-end: var(--space-5); }
+.mb-6 { margin-block-end: var(--space-6); }
+.mb-7 { margin-block-end: var(--space-7); }
+.mb-8 { margin-block-end: var(--space-8); }
+.mb-9 { margin-block-end: var(--space-9); }
+.mb-10 { margin-block-end: var(--space-10); }
+
+/* ========================
    DESKTOP (lg: 1024px)
    ======================== */
 
@@ -167,4 +183,17 @@
   .lg\:text-left { text-align: left; }
   .lg\:text-center { text-align: center; }
   .lg\:text-right { text-align: right; }
+
+  /* margin block end */
+   .lg\:mb-0 { margin-block-end: var(--space-0); }
+   .lg\:mb-1 { margin-block-end: var(--space-1); }
+   .lg\:mb-2 { margin-block-end: var(--space-2); }
+   .lg\:mb-3 { margin-block-end: var(--space-3); }
+   .lg\:mb-4 { margin-block-end: var(--space-4); }
+   .lg\:mb-5 { margin-block-end: var(--space-5); }
+   .lg\:mb-6 { margin-block-end: var(--space-6); }
+   .lg\:mb-7 { margin-block-end: var(--space-7); }
+   .lg\:mb-8 { margin-block-end: var(--space-8); }
+   .lg\:mb-9 { margin-block-end: var(--space-9); }
+   .lg\:mb-10 { margin-block-end: var(--space-10); }
 }
