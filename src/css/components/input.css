@@ -1,0 +1,51 @@
+.input {
+  --input-border: none;
+  --input-outline: none;
+  --input-ring: 0 0 0 1px var(--color-primary);
+  --input-padding: var(--space-2) var(--space-4);
+  --input-border-radius: var(--space-2);
+  --input-color: inherit;
+
+  appearance: none;
+  display: block;
+  width: 100%;
+  border: var(--input-border);
+  outline: var(--input-outline);
+  padding: var(--input-padding);
+  box-shadow: var(--input-ring);
+  border-radius: var(--input-border-radius);
+  color: var(--input-color);
+  transition: all 0.3s ease;
+}
+
+
+/* ** States */
+
+.input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.input:hover {
+  --input-ring: 0 0 0 1px var(--color-primary-hover);
+}
+
+.input:focus {
+  --input-ring: 0 0 0 2px var(--color-primary);
+}
+
+.input:invalid, .input[aria-invalid="true"] {
+  --input-ring: 0 0 0 1px var(--color-error);
+  --input-color: var(--color-error);
+}
+
+
+/* ** Sizes */
+
+.input-small {
+  --input-padding: var(--space-1) var(--space-4);
+}
+
+.input-large {
+  --input-padding: var(--space-3) var(--space-4);
+}

@@ -13,10 +13,10 @@
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  transition: all 0.3s ease;
   gap: var(--button-gap);
   padding: var(--button-padding);
   border-radius: var(--button-border-radius);
+  transition: all 0.3s ease;
 }
 
 .button:disabled {

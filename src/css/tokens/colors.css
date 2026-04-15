@@ -12,6 +12,7 @@
 
   /* Brand */
   --color-blue-500: oklch(0.55 0.15 250);
+  --color-red-500: oklch(63.7% 0.237 25.331);
 
   /* =========================
      SEMANTIC COLORS
@@ -29,6 +30,7 @@
   --color-secondary-active: oklch(from var(--color-secondary) calc(l - 0.04) c h);
   --color-border: var(--color-gray-300);
   --color-ring: oklch(from var(--color-blue-500) calc(l + 0.3) c h);
+  --color-error: var(--color-red-500);
 }
 
 @media (prefers-color-scheme: dark) {
